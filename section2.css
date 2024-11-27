@@ -1,0 +1,239 @@
+.Main-portfolio {
+    display: flex; /* 가로 방향 배치 */
+    justify-content: space-between; /* 양 옆으로 간격 유지 */
+    align-items: flex-start; /* 위쪽 정렬 */
+    gap: 10px; /* container와 explain 사이 간격 */
+    height : auto;
+}
+
+.container {
+    position: relative;
+    width: 50%; /* 화면의 50% 너비 */
+    height: auto; 
+    display: flex; 
+    flex-wrap: wrap; /* 줄바꿈 활성화 */
+    justify-content: center; 
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 4vh;
+    overflow: hidden;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.portfolio-box {
+    background-color: #222222;
+    border-radius: 16px;
+    box-shadow: 5px 5px 20px 3px gray;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 1s ease, transform 1s ease;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+#box:hover{
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+    transform: scale(1.07);
+    cursor: pointer
+}
+
+.portfolio-box.visible ,.portfolio-box2.visible {
+    opacity: 1;  /* 나타나게 설정 */
+    transform: translateY(0); /* 원래 위치로 이동 */
+}
+
+.explain-box {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 830px;
+    margin-top: calc(4vh + 20px);
+    border-radius: 32px;
+    background-color: #FFFFFF;
+    margin-right: 5%;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.portfolio-box-contents {
+    font-size: 30px;
+    padding: 3x;
+    color: white;
+}
+
+#explain-header {
+    font-weight: bold;           /* 글씨 두껍게 */
+    font-size: 32px;             /* 글씨 크기 설정 */
+    width: 100%;                 /* 너비 100% */
+    text-align: center;          /* 텍스트를 가운데 정렬 */
+    padding-top: 15px;           /* 상단 여백 설정 */
+    height: 50px;                /* 텍스트 박스 높이 설정 */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.explain-contents {
+    display: none; /* 처음에는 화면에 공간을 차지하지 않도록 설정 */
+    opacity: 0; /* 투명하게 설정 */
+    transition: opacity 0.3s ease-in-out; /* opacity에 부드러운 전환 효과 추가 */
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+#searchRank {
+    opacity: 0;  /* 처음에는 보이지 않음 */
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;  /* opacity와 visibility에 대한 트랜지션 추가 */
+}
+
+
+a {
+    display: flex;            /* Flexbox로 설정 */
+    justify-content: center;  /* 수평 중앙 정렬 */
+    align-items: center;      /* 수직 중앙 정렬 */
+    text-decoration: none;    /* 링크의 밑줄 제거 (선택 사항) */
+}
+
+#github-image1 {
+    max-width: 100%;         /* 이미지 너비 100% */
+    height: auto;            /* 이미지 높이는 비율에 맞게 조정 */
+    opacity: 0;
+}
+#github-image2 {
+    max-width: 100%;         /* 이미지 너비 100% */
+    height: auto;            /* 이미지 높이는 비율에 맞게 조정 */
+    opacity: 0;
+}
+
+@media (max-width: 1800px) {
+    .portfolio-box {
+        width: 300px; /* 너비 조정 */
+        height: 300px;
+    }
+    .explain-box{
+        height: 650px;
+    }
+    .portfolio-box-contents {
+        font-size: 25px;
+    }
+}
+@media (max-width: 1400px) {
+    .my-photo{
+        visibility: hidden;
+    }
+}
+
+
+@media (max-width: 1410px) {
+    .portfolio-box {
+        width: 200px; /* 너비 조정 */
+        height: 200px;
+    }
+    .explain-box{
+        height: 550px;
+    }
+    .portfolio-box-contents {
+        font-size: 20px;
+    }
+}
+
+.gmail-padding{
+    display: flex;
+    width: 56px;
+    height: 45px;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: #FFF;
+    box-shadow: 0px 4px 15.5px 0px rgba(0, 0, 0, 0.13);
+    padding: 0%;
+    margin-bottom: 5px;
+}
+
+.gmail-padding:hover{
+    width: 285px;
+    height:45px;
+    align-items: left;
+    justify-content: left;
+    padding-left: 12px;
+    transition: width 0.3s ease, padding-left 0s ease, justify-content 0.5s ease;
+}
+
+
+.gmail{
+    width: 32px;
+    height: 23.843px;
+    flex-shrink: 0;
+}
+
+.google-email{
+    display: none;
+    text-align: center;
+}
+
+.gmail-padding:hover .google-email {
+    padding-top: 2px;
+    padding-left: 50px;
+    position: absolute;
+    display: block;
+    
+}
+
+.github-padding{
+    display: flex;
+    width: 56px;
+    height: 45px;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: #FFF;
+    box-shadow: 0px 4px 15.5px 0px rgba(0, 0, 0, 0.13);
+    padding: 0%;
+}
+
+.github{
+    width: 32px;
+    height: 29.77px;
+    flex-shrink: 0;
+}
+
+.github-padding:hover{
+    width: 285px;
+    height:45px;
+    padding-left: 12px;
+    justify-content: left;
+    transition: width 0.3s ease, padding-left 0s ease, justify-content 0.5s ease;
+}
+.github-address{
+    display: none;
+}
+
+.github-padding:hover .github-address {
+    padding-top: 5px;
+    padding-left: 50px;
+    position: absolute;
+    display: block;
+    text-align: center;
+}
+
+.footer{
+    margin-left: 49%;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 0;
+}

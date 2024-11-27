@@ -1,0 +1,166 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+*{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
+
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+    height: 100%;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    align-content: center;
+    overflow: hidden; /* 스크롤바 숨김 */
+}
+
+.header {
+    z-index: 100;
+    position: fixed;
+    text-align: center;
+    font-weight: bold;
+    height: 89px;
+    background-color: #FFFFFF;
+    font-size: 36px;
+    line-height: 89px;
+    box-shadow: 10px 10px 100px 10px gainsboro;
+    top: 0;
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100%; /* 화면 크기만큼 섹션의 높이 설정 */
+    padding-top: 89px; /* header 높이만큼 위쪽 여백 추가 */
+    box-sizing: border-box;
+}
+
+
+.intro {
+    width: 50%;
+    height: auto;
+    padding-left: 10%;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+}
+
+#intro {
+    font-size: 44px;
+    font-weight: bold;
+    opacity: 0;
+    -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
+#main-intro {
+    padding-left: 60px;
+    font-size: 20px; /* 글자 크기 약간 키움 */
+    line-height: 1.6; /* 줄 간격 설정 (기본 글자 크기의 1.6배) */
+    letter-spacing: 0.5px; /* 글자 간격 살짝 추가 */
+    margin-top: 20px; /* 위쪽 여백 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+    color: #333333; /* 텍스트 색상 (가독성 높은 어두운 색상) */
+    text-align: justify; /* 텍스트 양쪽 정렬 */
+    -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.3s both;
+    animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.3s both;
+}
+
+.my-photo {
+    position: absolute; /* 부모 기준 절대 위치 */
+    top: 50%; /* 부모의 세로 가운데 */
+    right: 15%; /* 부모의 오른쪽에서 10% 떨어짐 */
+    transform: translateY(-50%); /* 세로 중앙 정렬 보정 */
+    width: 30%; /* 이미지 영역 너비 */
+    height: auto; /* 이미지 비율 유지 */
+}
+
+.my-photo img {
+    width: 100%; /* 부모 크기에 맞춰 이미지 조정 */
+    height: auto; /* 비율 유지 */
+    border-radius: 10px; /* 둥근 모서리 (선택 사항) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 추가 (선택 사항) */
+}
+
+.skill-standard{
+    gap: 5px;
+}
+
+.img-size-rectangle{
+    width: 70px;
+    height: 39.35px;
+}
+.img-size-weird{
+    width: 35px;
+    height: 49.444px;
+}
+.img-size-square{
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+#skill{
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.3s both;
+    animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.3s both;
+}
+
+
+#scale-up:hover{
+    transition: width 0.1s ease, height 0.1s ease, transform 0.1s ease;
+    transform: scale(1.3);
+}
